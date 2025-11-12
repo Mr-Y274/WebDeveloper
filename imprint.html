@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprint - Web Designer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .legal-page {
+            padding: 6rem 0 4rem;
+            min-height: 70vh;
+        }
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+        }
+        .legal-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        .legal-content h2 {
+            color: var(--text-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .legal-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .legal-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-logo"><a href="index.html" style="text-decoration: none; color: inherit;">Web Designer</a></div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#main-tasks" class="nav-link">Main Tasks</a></li>
+                <li><a href="index.html#key-responsibilities" class="nav-link">Responsibilities</a></li>
+                <li><a href="index.html#skills-tools" class="nav-link">Skills & Tools</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-content">
+                <h1>Imprint</h1>
+                
+                <h2>Information according to § 5 TMG</h2>
+                <p>
+                    <strong>Max Hannes Ritschel</strong><br>
+                    Oppspring 67<br>
+                    45470 Mülheim an der Ruhr<br>
+                    Germany
+                </p>
+
+                <h2>Contact</h2>
+                <p>
+                    Phone: 0177 6702642<br>
+                    Email: max.ritschel@gmx.de<br>
+                </p>
+
+                <h2>Responsible for content according to § 55 Abs. 2 RStV</h2>
+                <p>
+                    Max Hannes Ritschel<br>
+                    Oppspring 67<br>
+                    45470 Mülheim an der Ruhr<br>
+                    Germany
+                </p>
+
+                <h2>Liability for Content</h2>
+                <p>
+                    As a service provider, we are responsible for our own content on these pages in accordance with general laws pursuant to § 7 para. 1 TMG. According to §§ 8 to 10 TMG, however, we as a service provider are not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.
+                </p>
+                <p>
+                    Obligations to remove or block the use of information under general law remain unaffected. However, liability in this regard is only possible from the point in time at which a concrete infringement of the law becomes known. If we become aware of any such infringements, we will remove the content in question immediately.
+                </p>
+
+                <h2>Liability for Links</h2>
+                <p>
+                    Our offer contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the contents of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking.
+                </p>
+                <p>
+                    However, a permanent content control of the linked pages is not reasonable without concrete evidence of a violation of the law. If we become aware of any legal infringements, we will remove such links immediately.
+                </p>
+
+                <h2>Copyright</h2>
+                <p>
+                    The content and works created by the site operators on these pages are subject to German copyright law. The duplication, processing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use.
+                </p>
+                <p>
+                    Insofar as the content on this site was not created by the operator, the copyrights of third parties are observed. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. If we become aware of any infringements, we will remove such content immediately.
+                </p>
+
+                <h2>Notice for GitHub Pages</h2>
+                <p>
+                    This website is hosted on GitHub Pages. GitHub, Inc. is a US company. Further information can be found in the <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages" target="_blank" rel="noopener noreferrer">GitHub Pages documentation</a>.
+                </p>
+
+                <a href="index.html" class="back-link">← Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Web Designer Information</p>
+                <div class="footer-links">
+                    <a href="imprint.html">Imprint</a>
+                    <span class="footer-separator">|</span>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+                <p class="footer-made">Made with ❤️ by ML WebStudios</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
