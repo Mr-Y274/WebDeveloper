@@ -424,19 +424,25 @@ html {
     margin-bottom: 2rem;
 }
 
+/* Base salary card styles */
 .salary-card {
-    background: var(--bg-white);
     border-radius: 16px;
     padding: 2.5rem;
-    box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
     text-align: center;
-    border: 2px solid var(--border-color);
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, background 0.3s ease;
 }
 
-.salary-card::before {
+/* Normal salary cards */
+.salary-card:not(.featured) {
+    background: var(--bg-white);
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--border-color);
+    transform: translateY(0) scale(1);
+}
+
+.salary-card:not(.featured)::before {
     content: '';
     position: absolute;
     top: 0;
@@ -447,25 +453,38 @@ html {
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 0;
+    pointer-events: none;
 }
 
-.salary-card:hover::before {
+/* Normal cards hover */
+.salary-card:not(.featured):hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: var(--shadow-xl);
+    border: 2px solid var(--primary-color);
+}
+
+.salary-card:not(.featured):hover::before {
     opacity: 0.05;
 }
 
-.salary-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: var(--shadow-xl);
-    border-color: var(--primary-color);
-}
-
+/* Featured salary card - normal state */
 .salary-card.featured {
-    border-color: var(--primary-color);
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--shadow-md);
+    transform: translateY(0) scale(1);
 }
 
+.salary-card.featured::before {
+    display: none;
+}
+
+/* Featured salary card - hover state */
 .salary-card.featured:hover {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-10px) scale(1.03);
 }
 
 .salary-badge {
@@ -491,7 +510,15 @@ html {
     transition: color 0.3s ease;
 }
 
-.salary-card:hover .salary-amount {
+.salary-card:not(.featured):hover .salary-amount {
+    color: var(--primary-dark);
+}
+
+.salary-card.featured .salary-amount {
+    color: var(--primary-color);
+}
+
+.salary-card.featured:hover .salary-amount {
     color: var(--primary-dark);
 }
 
